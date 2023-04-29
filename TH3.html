@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="bai2()">Bai 2</button>
+<button type="button" onclick="bai3()">Bai 3</button>
+<button type="button" onclick="bai4()">Bai 4</button>
+<button type="button" onclick="bai5()">Bai 5</button>
+<button type="button" onclick="bai6()">Bai 6</button>
+<button type="button" onclick="bai7()">Bai 7</button>
+<button type="button" onclick="bai8()">Bai 8</button>
+<script>
+  function bai1(){
+    for (let i = 1; i < 100; i++) {
+      document.write(i + "<br>")
+      if (i === 99) {
+        document.write("Hoan Thanh")
+      }
+    }
+  }
+  function bai2() {
+    let a = parseInt(prompt("Nhap nhiet do hien tai:"));
+
+    do {
+
+      if (a < 20) {
+        alert("Lanh Qua");
+        a = parseInt(prompt("Nhap nhiet do hien tai ( Lanh Qua ):"));
+      }
+      else if ( a > 100){
+          alert("Nong Qua")
+          a = parseInt(prompt("Nhap nhiet do hien tai ( nong Qua ):"));
+        }
+    }
+    while (a < 20 || a > 100);
+
+    alert("Nhiet Do Da On")
+  }
+
+  function bai3(){
+    let newNumber = 0;
+    let newNumber2 = 1;
+    let newNumber3 = 0;
+
+for ( let i = 0; i < 20 ; i++) {
+newNumber = newNumber2 + newNumber3;
+document.write(newNumber + "<br>")
+newNumber3 = newNumber2;
+newNumber2 = newNumber;
+}
+  }
+function bai4(){
+    let newNumber = 0;
+    let newNumber2 = 1;
+    let newNumber3 = 0;
+    let j = 0;
+    for ( let i = 0; i < 20 ; i++) {
+      newNumber = newNumber2 + newNumber3;
+ if (newNumber % 5 === 0){
+   if ( j < 1){
+     alert("So dau tien chia het cho 5 la:" + newNumber)
+   }
+   j++;
+}
+ document.write(newNumber)
+      newNumber3 = newNumber2;
+      newNumber2 = newNumber;
+
+  }
+}
+function bai5() {
+  let newNumber = 0;
+  let newNumber2 = 1;
+  let newNumber3 = 0;
+  let sum = 0;
+
+  for ( let i = 0; i < 20 ; i++) {
+    newNumber = newNumber2 + newNumber3;
+    document.write(newNumber + "<br>")
+    newNumber3 = newNumber2;
+    newNumber2 = newNumber;
+    sum += newNumber;
+  }
+  document.write( "Tong 20 So dau la" + sum);
+
+}
+function bai6(){
+    let sum30 = 0;
+    let soLanDem = 0;
+    let soTuNhien = 1;
+
+    while ( soLanDem < 30){
+        if ( soTuNhien % 7 === 0) {
+          document.write(soTuNhien + "<br>");
+          sum30 += soTuNhien;
+          soLanDem++;
+          soTuNhien++;
+        }
+        else {
+          soTuNhien++;
+        }
+    }
+   document.write("Tong 30 so chia het het 7 la :" + sum30);
+}
+function bai7() {
+    for (let i = 1; i <=100; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        document.write("fizzbuzz" + "<br>");
+      }else if ( i % 3 === 0 ){
+        document.write("fizz" + "<br>");
+      }else if ( i % 5 === 0){
+        document.write("buzz" +"<br>")
+      }else {
+        document.write(i + "<br>")
+      }
+    }
+}
+function bai8(){
+    let number = parseInt(prompt("Nhap Khoang Ban Muon Doan "))
+    let count = 0;
+    let nhapSo = parseInt(prompt("Nhap so Ban Doan "))
+    let a = Math.round(Math.random() * number)
+
+  while ( nhapSo !== a ) {
+       if (nhapSo < a) {
+        alert("So be hon nhap lai");
+        nhapSo = parseInt(prompt("Nhap lai so Ban Doan "));
+        count++;}
+       else {
+         alert( "So Lon Hon Nhap Lai" );
+         nhapSo = parseInt(prompt("Nhap lai so Ban Doan "));
+         count++;}
+        if ( count === 4 ){
+          document.write("Da het lan doan");
+          break;
+        }
+      }
+  document.write("Chuc mung ban da doan dung");
+
+}
+</script>
+</body>
+</html>

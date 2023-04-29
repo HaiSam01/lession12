@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="vidu1()">vidu1</button>
+<script>
+    function vidu1 (){
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+
+        for (a = 1; a <= 10; a++) {
+            sout = sout + "<tr>";
+            for (b = 1; b <= 10; b++) {
+                sout += "<td>" + a * b + "</td>";
+            }
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</tabel>";
+        document.write(sout);
+    }
+
+function vidu2 () {
+    let a = 1;
+    let b = 1;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+
+    while (a <= 10) {
+        sout = sout + "<tr>";
+        while (b <= 10) {
+            sout = sout + "<td>" + b * a + "</td>";
+            b++;
+        }
+        sout = sout + "</tr>";
+        b = 1;
+        a++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+}
+</script>
+</body>
+</html>

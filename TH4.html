@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="bai1()"> Bai 1</button>
+<button type="button" onclick="bai2()"> Bai 2</button>
+<button type="button" onclick="bai3()"> Bai 3</button>
+<button type="button" onclick="bai3_1()"> Bai 3_1</button>
+<button type="button" onclick="bai5()"> Bai 5</button>
+
+<p id="view"></p>
+<script>
+  function bai1(){
+  let newNumber = 0;
+  let newNumber2 = 1;
+  let newNumber3 = 0;
+  let nhapSo = parseInt(prompt("Nhap so luong muon in ra:"));
+
+  for ( let i = 0; i < nhapSo ; i++) {
+    newNumber = newNumber2 + newNumber3;
+    document.write(newNumber + "<br>")
+    newNumber3 = newNumber2;
+    newNumber2 = newNumber;
+  }
+  }
+  function bai2(){
+    let nhapSo = parseInt(prompt("Nhap giai thua ban muon tinh"));
+    let newNumber = 1;
+ for (let i = 2; i <= nhapSo ; i++ ){
+   newNumber *= i;
+ }
+ document.write(newNumber);
+  }
+  function bai3(){
+    let sao = "*";
+    for (let a = 1 ; a < 5 ; a++){
+      document.write(sao + "<br>")
+      sao = sao +"*";
+    }
+  }
+  function bai3_1(){
+
+let sao = "*";
+
+    for (let a = 1 ; a < 5 ; a++){
+     document.getElementById("view").innerHTML= + sao + "<br>"
+      sao = sao +"*";
+    }
+  }
+  function bai5() {
+    let tienGoc = parseInt(prompt("Nhap Tien Goc"));
+    let lai = parseFloat(prompt("Nhap Lai Xuat"));
+    let soThangVay = parseInt(prompt("So Thanh vay"));
+    let lai_n = tienGoc * Math.pow(1 + lai / 100, soThangVay) - tienGoc;
+    let tong_tien = tienGoc + lai_n;
+
+    alert("Tong Tien La" + tong_tien)
+    }
+    function bai6(){
+    //chua làm được
+    }
+
+</script>
+</body>
+</html>

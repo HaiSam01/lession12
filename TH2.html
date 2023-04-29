@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("Nhap so luong So Nguyen To"));
+//  let i = 2 ; // so xet
+  let n = 0 // so lan xet ;
+  let c = 0; // so uoc chung
+  for ( let i = 2 ; i < 1000; i++){
+      if ( n < number){
+        for  ( let j = 1; j <= i ; j++){
+            if ( i % j === 0 && i % 1 === 0){
+                 c++;
+            }
+        }
+        if ( c === 2 ){
+            document.write(i + "<br>");
+              n += 1;
+        }
+        c = 0 ;
+      }
+      else {
+          break;
+      }
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
